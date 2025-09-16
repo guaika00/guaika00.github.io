@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/scripts/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:h="http://www.w3.org/TR/html4/"><channel><title>Astro Theme Pure</title><description>Stay hungry, stay foolish</description><link>https://astro-pure.js.org</link><item><title>Customize Theme</title><link>https://astro-pure.js.org/docs/advanced/customize</link><guid isPermaLink="true">https://astro-pure.js.org/docs/advanced/customize</guid><description>Custom theme by yourself</description><content:encoded>&lt;p&gt;import { Aside, Spoiler, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/scripts/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:h="http://www.w3.org/TR/html4/"><channel><title>XiCha</title><description>Money comes, wealth comes.</description><link>https://astro-pure.js.org</link><item><title>Customize Theme</title><link>https://astro-pure.js.org/docs/advanced/customize</link><guid isPermaLink="true">https://astro-pure.js.org/docs/advanced/customize</guid><description>Custom theme by yourself</description><content:encoded>&lt;p&gt;import { Aside, Spoiler, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;h2&gt;You Should Know&lt;/h2&gt;
 &lt;p&gt;This theme is designed to &quot;NPM Package&quot; for the following reasons:&lt;/p&gt;
 &lt;ol&gt;
@@ -1285,7 +1285,7 @@ carefully.&lt;/p&gt;
 &lt;li&gt;Add base paths in &lt;code&gt;src/assets/styles/app.css&lt;/code&gt; for all url in &lt;code&gt;@font-face&lt;/code&gt; property.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title>Getting Started</title><link>https://astro-pure.js.org/docs/setup/getting-started</link><guid isPermaLink="true">https://astro-pure.js.org/docs/setup/getting-started</guid><description>Get started with the Astro Theme Pure</description><content:encoded>&lt;p&gt;import { Steps, Aside, Tabs, TabItem } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;/ol&gt;</content:encoded></item><item><title>Getting Started</title><link>https://astro-pure.js.org/docs/setup/getting-started</link><guid isPermaLink="true">https://astro-pure.js.org/docs/setup/getting-started</guid><description>Get started with the Xicha</description><content:encoded>&lt;p&gt;import { Steps, Aside, Tabs, TabItem } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Two way to install. &quot;Template&quot; way is lightweight and simple, but hard to update; while &quot;Fork&quot; way is easy to update but needs some skills for git.&lt;/p&gt;
 &lt;h3&gt;Install Using Template&lt;/h3&gt;
@@ -1392,9 +1392,9 @@ export const content = { blog } // [!code ++]
 &lt;p&gt;You can configure your project inside the &lt;code&gt;src/site.config.ts&lt;/code&gt; configuration file:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export const theme: ThemeUserConfig = {
    author: &apos;CWorld&apos;,
-   title: &apos;Astro Theme Pure&apos;,
-   site: &apos;https://astro-pure.js.org&apos;,
-   description: &apos;Stay hungry, stay foolish&apos;,
+   title: &apos;Xicha&apos;,
+   site: &apos;https://lisici.com&apos;,
+   description: &apos;Money comes, wealth comes.&apos;,
    // ...
 }
 
