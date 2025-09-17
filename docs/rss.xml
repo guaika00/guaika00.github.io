@@ -634,139 +634,7 @@ function draw(t,c) { ctx.fillStyle=c; ctx.fillRect(t%sz*sz+1,~~(t/sz)*sz+1,sz-2,
 &amp;#x3C;Comment /&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Render:&lt;/p&gt;
-&lt;p&gt;import { Comment } from &apos;@/components/waline&apos;&lt;/p&gt;</content:encoded></item><item><title>Friend Links</title><link>https://astro-pure.js.org/docs/integrations/links</link><guid isPermaLink="true">https://astro-pure.js.org/docs/integrations/links</guid><description>Configurations for friend links</description><content:encoded>&lt;p&gt;import { Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
-&lt;h2&gt;Remove Links Page&lt;/h2&gt;
-&lt;p&gt;Links page is a page for showing your friend blog links, which is enabled by default.&lt;/p&gt;
-&lt;p&gt;If you want to remove the links page for any reason, follow the steps in this section. Otherwise, you can skip ahead to the next chapter.&lt;/p&gt;
-&lt;p&gt;Set &lt;code&gt;links.enable&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt; in &lt;code&gt;src/site.config.ts&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export const integ: IntegrationUserConfig = {
-  // ...
-  links: {
-    enable: false // [!code highlight]
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And also, remember to delete the following folders &amp;#x26; files:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;src/components/links/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;src/pages/links/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;public/links.json&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Basic Configurations&lt;/h2&gt;
-&lt;p&gt;A basic configuration for friend links is in &lt;code&gt;src/site.config.ts&lt;/code&gt;. You can add your friend&apos;s logbook or your own link info.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export const integ: IntegrationUserConfig = {
-  links: {
-    // Friend logbook
-    logbook: [
-      { date: &apos;2025-03-16&apos;, content: &apos;Is there a leakage?&apos; },
-      { date: &apos;2025-03-16&apos;, content: &apos;A leakage of what?&apos; },
-      { date: &apos;2025-03-16&apos;, content: &apos;I have a full seat of water, like, full of water!&apos; },
-      { date: &apos;2025-03-16&apos;, content: &apos;Must be the water.&apos; },
-      { date: &apos;2025-03-16&apos;, content: &apos;Let\&apos;s add that to the words of wisdom.&apos; },
-    ],
-    // Yourself link info
-    applyTip: {
-      name: theme.title,
-      desc: theme.description || &apos;Null&apos;,
-      url: &apos;https://astro-pure.js.org/&apos;,
-      avatar: &apos;https://astro-pure.js.org/favicon/favicon.ico&apos;
-    }
-  },
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Friend Links&lt;/h2&gt;
-&lt;p&gt;The friend links configurations are at &lt;code&gt;public/links.json&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
-  &quot;friends&quot;: [
-    {
-      &quot;id_name&quot;: &quot;cf-links&quot;,
-      &quot;desc&quot;: &quot;Common links included in circle friends&quot;,
-      &quot;link_list&quot;: [
-        { // [!code highlight:6]
-          &quot;name&quot;: &quot;Elysia&quot;,
-          &quot;intro&quot;: &quot;Hi, did you miss me? Anywhere and anytime, Elysia will return all your expectations.&quot;,
-          &quot;link&quot;: &quot;https://honkaiimpact3.fandom.com/wiki/Elysia&quot;,
-          &quot;avatar&quot;: &quot;https://0.gravatar.com/avatar/&quot;
-          // Here you can also leave some other fields as notes
-        },
-      ]
-    },
-    {
-      &quot;id_name&quot;: &quot;inactive-links&quot;,
-      &quot;desc&quot;: &quot;Inactive or rule-breaking friends&quot;,
-      &quot;link_list&quot;: [] // you can temporarily leave some bad links here
-    },
-    {
-      &quot;id_name&quot;: &quot;special-links&quot;,
-      &quot;desc&quot;: &quot;Other special links&quot;,
-      &quot;link_list&quot;: [] // special links which are note your friends
-    }
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Integrated with &lt;code&gt;Friend-Circle-Lite&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/willow-god/Friend-Circle-Lite&quot;&gt;Friend-Circle-Lite&lt;/a&gt; is a stripped-down friend-link app with no backend and running only using github action.&lt;/p&gt;
-&lt;p&gt;It requires:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;A github repository with github actions enabled by cron.&lt;/li&gt;
-&lt;li&gt;A static site server like Vercel, Netlify, GitHub Pages, etc.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This theme has not integrated it and will not provide support for it in the future. But don&apos;t worry, this doc will guide you to integrate it.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Fork the &lt;a href=&quot;https://github.com/cworld1/friend-circle-lite&quot;&gt;Friend-Circle-Lite&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Modify the &lt;code&gt;config.yaml&lt;/code&gt; in your forked repository:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-yaml&quot;&gt;spider_settings:
-   enable: true
-   json_url: &quot;&amp;#x3C;your-site&gt;/links.json&quot; # [!code highlight]
-   article_count: 4
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Go to &quot;Actions&quot; page and run workflow &quot;Friend Circle Lite&quot; manually to check if it works. This will also generate server files in &quot;page&quot; branch.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Checkout &lt;a href=&quot;https://github.com/willow-god/Friend-Circle-Lite?tab=readme-ov-file#%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99&quot;&gt;docs&lt;/a&gt; to deploy the server files to your static site server.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add &lt;a href=&quot;https://gist.github.com/cworld1/cf0dc6daa89264e6d745d3e68ef8c01c&quot;&gt;fetching script file &lt;code&gt;friendCircle.ts&lt;/code&gt;&lt;/a&gt; to your project at path &lt;code&gt;src/plugins&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add &lt;a href=&quot;https://gist.github.com/cworld1/cf0dc6daa89264e6d745d3e68ef8c01c?permalink_comment_id=5311916#gistcomment-5311916&quot;&gt;style file &lt;code&gt;fc.css&lt;/code&gt;&lt;/a&gt; to your project at path &lt;code&gt;src/assets/styles&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add initialize code in &lt;code&gt;src/components/pages/links/index.astro&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-astro&quot;&gt;---
-const headings = [
-   // ...
-   { depth: 2, slug: &apos;small-circle&apos;, text: &apos;Small Circle&apos; }, // [!code highlight]
-]
----
-
-&amp;#x3C;PageLayout&gt;
-   {/* ... */}
-   &amp;#x3C;!-- [!code highlight:16] --&gt;
-   &amp;#x3C;h2 id=&apos;small-circle&apos;&gt;Small Circle&amp;#x3C;/h2&gt;
-   &amp;#x3C;div id=&apos;friend-circle-lite-root&apos; class=&apos;not-prose&apos;&gt;Loading...&amp;#x3C;/div&gt;
-   &amp;#x3C;script&gt;
-      import &apos;@/assets/styles/fc.css&apos;
-
-      import { FriendCircle } from &apos;@/plugins/friendCircle&apos;
-
-      const fc = new FriendCircle()
-      fc.init({
-         private_api_url: &apos;&amp;#x3C;your-fc-lite-server&gt;&apos;,
-         page_turning_number: 10,
-         error_img: &apos;https://cravatar.cn/avatar/57d8260dfb55501c37dde588e7c3852c&apos;
-      })
-      fc.load()
-   &amp;#x3C;/script&gt;
-&amp;#x3C;/PageLayout&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title>User Components</title><link>https://astro-pure.js.org/docs/integrations/components</link><guid isPermaLink="true">https://astro-pure.js.org/docs/integrations/components</guid><description>Easily extend your content page more interactive</description><content:encoded>&lt;p&gt;import { Aside, Tabs, TabItem, MdxRepl } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;p&gt;import { Comment } from &apos;@/components/waline&apos;&lt;/p&gt;</content:encoded></item><item><title>User Components</title><link>https://astro-pure.js.org/docs/integrations/components</link><guid isPermaLink="true">https://astro-pure.js.org/docs/integrations/components</guid><description>Easily extend your content page more interactive</description><content:encoded>&lt;p&gt;import { Aside, Tabs, TabItem, MdxRepl } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;p&gt;Components let you easily reuse a piece of UI or styling consistently. You can use them not just in &lt;code&gt;.astro&lt;/code&gt; files, but also in &lt;code&gt;.mdx&lt;/code&gt; files.&lt;/p&gt;
 &lt;p&gt;For &lt;code&gt;.astro&lt;/code&gt;, you can directly import and use components and use. An example will also shown in the first section.&lt;/p&gt;
 &lt;h2&gt;Containers&lt;/h2&gt;
@@ -968,7 +836,139 @@ import { Button } from &apos;astro-pure/user&apos;
 }
 &amp;#x3C;/div&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There&apos;s also some &lt;a href=&quot;/docs/integrations/advanced&quot;&gt;Advanced Components&lt;/a&gt;, which may suit for you. Hope you enjoy using these components!&lt;/p&gt;</content:encoded></item><item><title>Other Integrations</title><link>https://astro-pure.js.org/docs/integrations/others</link><guid isPermaLink="true">https://astro-pure.js.org/docs/integrations/others</guid><description>Other integrations that help improve your site</description><content:encoded>&lt;p&gt;import { Aside, Tabs, TabItem, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;p&gt;There&apos;s also some &lt;a href=&quot;/docs/integrations/advanced&quot;&gt;Advanced Components&lt;/a&gt;, which may suit for you. Hope you enjoy using these components!&lt;/p&gt;</content:encoded></item><item><title>Friend Links</title><link>https://astro-pure.js.org/docs/integrations/links</link><guid isPermaLink="true">https://astro-pure.js.org/docs/integrations/links</guid><description>Configurations for friend links</description><content:encoded>&lt;p&gt;import { Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;h2&gt;Remove Links Page&lt;/h2&gt;
+&lt;p&gt;Links page is a page for showing your friend blog links, which is enabled by default.&lt;/p&gt;
+&lt;p&gt;If you want to remove the links page for any reason, follow the steps in this section. Otherwise, you can skip ahead to the next chapter.&lt;/p&gt;
+&lt;p&gt;Set &lt;code&gt;links.enable&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt; in &lt;code&gt;src/site.config.ts&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export const integ: IntegrationUserConfig = {
+  // ...
+  links: {
+    enable: false // [!code highlight]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And also, remember to delete the following folders &amp;#x26; files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src/components/links/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/pages/links/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;public/links.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Basic Configurations&lt;/h2&gt;
+&lt;p&gt;A basic configuration for friend links is in &lt;code&gt;src/site.config.ts&lt;/code&gt;. You can add your friend&apos;s logbook or your own link info.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export const integ: IntegrationUserConfig = {
+  links: {
+    // Friend logbook
+    logbook: [
+      { date: &apos;2025-03-16&apos;, content: &apos;Is there a leakage?&apos; },
+      { date: &apos;2025-03-16&apos;, content: &apos;A leakage of what?&apos; },
+      { date: &apos;2025-03-16&apos;, content: &apos;I have a full seat of water, like, full of water!&apos; },
+      { date: &apos;2025-03-16&apos;, content: &apos;Must be the water.&apos; },
+      { date: &apos;2025-03-16&apos;, content: &apos;Let\&apos;s add that to the words of wisdom.&apos; },
+    ],
+    // Yourself link info
+    applyTip: {
+      name: theme.title,
+      desc: theme.description || &apos;Null&apos;,
+      url: &apos;https://astro-pure.js.org/&apos;,
+      avatar: &apos;https://astro-pure.js.org/favicon/favicon.ico&apos;
+    }
+  },
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Friend Links&lt;/h2&gt;
+&lt;p&gt;The friend links configurations are at &lt;code&gt;public/links.json&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
+  &quot;friends&quot;: [
+    {
+      &quot;id_name&quot;: &quot;cf-links&quot;,
+      &quot;desc&quot;: &quot;Common links included in circle friends&quot;,
+      &quot;link_list&quot;: [
+        { // [!code highlight:6]
+          &quot;name&quot;: &quot;Elysia&quot;,
+          &quot;intro&quot;: &quot;Hi, did you miss me? Anywhere and anytime, Elysia will return all your expectations.&quot;,
+          &quot;link&quot;: &quot;https://honkaiimpact3.fandom.com/wiki/Elysia&quot;,
+          &quot;avatar&quot;: &quot;https://0.gravatar.com/avatar/&quot;
+          // Here you can also leave some other fields as notes
+        },
+      ]
+    },
+    {
+      &quot;id_name&quot;: &quot;inactive-links&quot;,
+      &quot;desc&quot;: &quot;Inactive or rule-breaking friends&quot;,
+      &quot;link_list&quot;: [] // you can temporarily leave some bad links here
+    },
+    {
+      &quot;id_name&quot;: &quot;special-links&quot;,
+      &quot;desc&quot;: &quot;Other special links&quot;,
+      &quot;link_list&quot;: [] // special links which are note your friends
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Integrated with &lt;code&gt;Friend-Circle-Lite&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/willow-god/Friend-Circle-Lite&quot;&gt;Friend-Circle-Lite&lt;/a&gt; is a stripped-down friend-link app with no backend and running only using github action.&lt;/p&gt;
+&lt;p&gt;It requires:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A github repository with github actions enabled by cron.&lt;/li&gt;
+&lt;li&gt;A static site server like Vercel, Netlify, GitHub Pages, etc.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This theme has not integrated it and will not provide support for it in the future. But don&apos;t worry, this doc will guide you to integrate it.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Fork the &lt;a href=&quot;https://github.com/cworld1/friend-circle-lite&quot;&gt;Friend-Circle-Lite&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Modify the &lt;code&gt;config.yaml&lt;/code&gt; in your forked repository:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-yaml&quot;&gt;spider_settings:
+   enable: true
+   json_url: &quot;&amp;#x3C;your-site&gt;/links.json&quot; # [!code highlight]
+   article_count: 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &quot;Actions&quot; page and run workflow &quot;Friend Circle Lite&quot; manually to check if it works. This will also generate server files in &quot;page&quot; branch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Checkout &lt;a href=&quot;https://github.com/willow-god/Friend-Circle-Lite?tab=readme-ov-file#%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99&quot;&gt;docs&lt;/a&gt; to deploy the server files to your static site server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;a href=&quot;https://gist.github.com/cworld1/cf0dc6daa89264e6d745d3e68ef8c01c&quot;&gt;fetching script file &lt;code&gt;friendCircle.ts&lt;/code&gt;&lt;/a&gt; to your project at path &lt;code&gt;src/plugins&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;a href=&quot;https://gist.github.com/cworld1/cf0dc6daa89264e6d745d3e68ef8c01c?permalink_comment_id=5311916#gistcomment-5311916&quot;&gt;style file &lt;code&gt;fc.css&lt;/code&gt;&lt;/a&gt; to your project at path &lt;code&gt;src/assets/styles&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add initialize code in &lt;code&gt;src/components/pages/links/index.astro&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-astro&quot;&gt;---
+const headings = [
+   // ...
+   { depth: 2, slug: &apos;small-circle&apos;, text: &apos;Small Circle&apos; }, // [!code highlight]
+]
+---
+
+&amp;#x3C;PageLayout&gt;
+   {/* ... */}
+   &amp;#x3C;!-- [!code highlight:16] --&gt;
+   &amp;#x3C;h2 id=&apos;small-circle&apos;&gt;Small Circle&amp;#x3C;/h2&gt;
+   &amp;#x3C;div id=&apos;friend-circle-lite-root&apos; class=&apos;not-prose&apos;&gt;Loading...&amp;#x3C;/div&gt;
+   &amp;#x3C;script&gt;
+      import &apos;@/assets/styles/fc.css&apos;
+
+      import { FriendCircle } from &apos;@/plugins/friendCircle&apos;
+
+      const fc = new FriendCircle()
+      fc.init({
+         private_api_url: &apos;&amp;#x3C;your-fc-lite-server&gt;&apos;,
+         page_turning_number: 10,
+         error_img: &apos;https://cravatar.cn/avatar/57d8260dfb55501c37dde588e7c3852c&apos;
+      })
+      fc.load()
+   &amp;#x3C;/script&gt;
+&amp;#x3C;/PageLayout&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title>Other Integrations</title><link>https://astro-pure.js.org/docs/integrations/others</link><guid isPermaLink="true">https://astro-pure.js.org/docs/integrations/others</guid><description>Other integrations that help improve your site</description><content:encoded>&lt;p&gt;import { Aside, Tabs, TabItem, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;h2&gt;&lt;code&gt;medium-zoom&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Checkout &lt;a href=&quot;https://github.com/francoischalifour/medium-zoom&quot;&gt;medium-zoom&lt;/a&gt; for more.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export const integ: IntegrationUserConfig = {
@@ -1187,7 +1187,105 @@ heroImage: { src: &apos;./thumbnail.jpg&apos; } # will used to social-image
 This is the first section of the privacy policy.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;HTML Pages&lt;/h3&gt;
-&lt;p&gt;Files with the &lt;code&gt;.html&lt;/code&gt; file extension can be placed in the &lt;code&gt;src/pages/&lt;/code&gt; directory and used directly as pages on your site. Note that some key Astro features are not supported in &lt;a href=&quot;https://docs.astro.build/en/basics/astro-components/#html-components&quot;&gt;HTML Components&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title>Getting Started</title><link>https://astro-pure.js.org/docs/setup/getting-started</link><guid isPermaLink="true">https://astro-pure.js.org/docs/setup/getting-started</guid><description>Get started with the XiCha 喜茶同学</description><content:encoded>&lt;p&gt;import { Steps, Aside, Tabs, TabItem } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;p&gt;Files with the &lt;code&gt;.html&lt;/code&gt; file extension can be placed in the &lt;code&gt;src/pages/&lt;/code&gt; directory and used directly as pages on your site. Note that some key Astro features are not supported in &lt;a href=&quot;https://docs.astro.build/en/basics/astro-components/#html-components&quot;&gt;HTML Components&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title>Deployment</title><link>https://astro-pure.js.org/docs/setup/deployment</link><guid isPermaLink="true">https://astro-pure.js.org/docs/setup/deployment</guid><description>Deploy your site to various platforms</description><content:encoded>&lt;p&gt;import { Aside, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;h2&gt;Package Mode&lt;/h2&gt;
+&lt;p&gt;This theme which &gt;= v4.0.0 has integrated NPM package mode. Recommended way is remove local package file, and install the theme integration from NPM. If there&apos;s some reason you want to change the package content, you should link local package to your theme template. A &lt;code&gt;bun&lt;/code&gt; method is integrated. You should:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add environment variable &lt;code&gt;BUN_LINK_PKG=true&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;bun pure check&lt;/code&gt; to link the package automatically.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This method can also work on Deployment for other platforms like &apos;Vercel&apos;. All you need is to add the environment variable to build options on your platform control settings. The build command &lt;code&gt;astro-pure check &amp;#x26;&amp;#x26; astro check &amp;#x26;&amp;#x26; astro build&lt;/code&gt; will automatically link the package.&lt;/p&gt;
+&lt;h2&gt;Deployment Mode&lt;/h2&gt;
+&lt;p&gt;Astro had a very fantastic support for deployment. Check &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/&quot;&gt;Deploy your Astro Site&lt;/a&gt; for more.&lt;/p&gt;
+&lt;h3&gt;Vercel&lt;/h3&gt;
+&lt;p&gt;This theme supports Vercel by default:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Push your code to your online Git repository (GitHub, GitLab, BitBucket).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vercel.com/new&quot;&gt;Import your project&lt;/a&gt; into Vercel.&lt;/li&gt;
+&lt;li&gt;Vercel will automatically detect Astro and configure the right settings.&lt;/li&gt;
+&lt;li&gt;Your application is deployed! (e.g. &lt;a href=&quot;https://astro.vercel.app/&quot;&gt;astro.vercel.app&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And vercel also support static method:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
+import vercelStatic from &apos;@astrojs/vercel/static&apos;; // [!code ++]
+
+export default defineConfig({
+  //   ...
+  adapter: vercelServerless() // [!code --]
+  adapter: vercelStatic(), // [!code ++]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Node server&lt;/h3&gt;
+&lt;p&gt;If you are deploying with Node.js locally, you need to install &lt;code&gt;@astrojs/node&lt;/code&gt; first:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;bun add &apos;@astrojs/node&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then follow the comments in &lt;code&gt;astro.config.ts&lt;/code&gt; and modify like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import node from &apos;@astrojs/node&apos; // [!code ++]
+import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
+
+export default defineConfig({
+  //   ...
+  adapter: vercelServerless(), // [!code --]
+  adapter: node({ mode: &apos;standalone&apos; }), // [!code ++]
+
+  integrations: [
+    // prettier-ignore
+    outputCopier({ // [!code --]
+      integ: [&apos;sitemap&apos;, &apos;pagefind&apos;] // [!code --]
+    }) // [!code --]
+  ]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Bun server&lt;/h3&gt;
+&lt;p&gt;Bun also support static method.&lt;/p&gt;
+&lt;p&gt;Check &lt;a href=&quot;https://www.npmjs.com/package/@nurodev/astro-bun&quot;&gt;@nurodev/astro-bun&lt;/a&gt; for more.&lt;/p&gt;
+&lt;h3&gt;Static&lt;/h3&gt;
+&lt;p&gt;Remove all server adapter configuration in &lt;code&gt;astro.config.ts&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
+
+export default defineConfig({
+  //   ...
+  adapter: vercelServerless(), // [!code --]
+  output: &apos;server&apos; // [!code --]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;GitHub Pages&lt;/h3&gt;
+&lt;p&gt;See &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/github/&quot;&gt;Astro: Configure Astro for GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For ones deploying on GitHub Pages with a base path, like &lt;code&gt;username.github.io/repo-name&lt;/code&gt;, please read &lt;a href=&quot;/docs/setup/deployment#platform-with-base-path&quot;&gt;Deployment#Platform with Base Path&lt;/a&gt;.
+carefully.&lt;/p&gt;
+&lt;h2&gt;Platform with Base Path&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Astro provides basic support for a base path — see the &quot;base&quot; option in the configuration reference &lt;a href=&quot;https://docs.astro.build/en/reference/configuration-reference/#base&quot;&gt;Astro: base&lt;/a&gt; for more.&lt;/li&gt;
+&lt;li&gt;This theme will not support the base path, as it seriously break down the experience of remote developments. In general, deploying the template with a base path is not recommended because the homepage integrates lists, resume elements, and other features that rely on the template’s source structure.&lt;/li&gt;
+&lt;li&gt;If you follow the guide and modify the code, you can deploy with a base path, but you cannot use the same project copy to deploy both with and without a base path simultaneously. Proceed at your own risk; do not open issues about this unless you plan to contribute improvements to the docs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set the &lt;code&gt;base&lt;/code&gt; option in &lt;code&gt;astro.config.ts&lt;/code&gt; to your base path, for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export default defineConfig({
+  //   ...
+  base: &apos;/repo-name/&apos; // Replace with your repository name
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update all internal links in Dynamic script files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src/components/BaseHead.astro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/pages/docs/DocsContent.astro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/pages/rss.xml.ts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;packages/pure/components/pages/PostPreview.astro&lt;/code&gt; (&lt;a href=&quot;/docs/advanced/customize&quot;&gt;Customize Theme&lt;/a&gt; is required to make the change)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update all static resource paths:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add base paths in &lt;code&gt;src/site.config.ts&lt;/code&gt;. Especially the menu configs.&lt;/li&gt;
+&lt;li&gt;Add base paths in &lt;code&gt;src/plugins/shiki-transformers.ts&lt;/code&gt; for all &lt;code&gt;/icons/code.svg&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add base paths in &lt;code&gt;src/assets/styles/app.css&lt;/code&gt; for all url in &lt;code&gt;@font-face&lt;/code&gt; property.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title>Getting Started</title><link>https://astro-pure.js.org/docs/setup/getting-started</link><guid isPermaLink="true">https://astro-pure.js.org/docs/setup/getting-started</guid><description>Get started with the XiCha 喜茶同学</description><content:encoded>&lt;p&gt;import { Steps, Aside, Tabs, TabItem } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Two way to install. &quot;Template&quot; way is lightweight and simple, but hard to update; while &quot;Fork&quot; way is easy to update but needs some skills for git.&lt;/p&gt;
 &lt;h3&gt;Install Using Template&lt;/h3&gt;
@@ -1307,104 +1405,6 @@ export const integ: IntegrationUserConfig = { /* ... */ }
 &lt;li&gt;
 &lt;p&gt;Typescript Syntax&lt;/p&gt;
 &lt;p&gt;The configuration file &lt;code&gt;site.config.ts&lt;/code&gt; uses Typescript syntax. If you are not familiar with TS syntax, please read about it &lt;a href=&quot;https://learnxinyminutes.com/docs/typescript/&quot;&gt;here&lt;/a&gt; first.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title>Deployment</title><link>https://astro-pure.js.org/docs/setup/deployment</link><guid isPermaLink="true">https://astro-pure.js.org/docs/setup/deployment</guid><description>Deploy your site to various platforms</description><content:encoded>&lt;p&gt;import { Aside, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
-&lt;h2&gt;Package Mode&lt;/h2&gt;
-&lt;p&gt;This theme which &gt;= v4.0.0 has integrated NPM package mode. Recommended way is remove local package file, and install the theme integration from NPM. If there&apos;s some reason you want to change the package content, you should link local package to your theme template. A &lt;code&gt;bun&lt;/code&gt; method is integrated. You should:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Add environment variable &lt;code&gt;BUN_LINK_PKG=true&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;bun pure check&lt;/code&gt; to link the package automatically.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This method can also work on Deployment for other platforms like &apos;Vercel&apos;. All you need is to add the environment variable to build options on your platform control settings. The build command &lt;code&gt;astro-pure check &amp;#x26;&amp;#x26; astro check &amp;#x26;&amp;#x26; astro build&lt;/code&gt; will automatically link the package.&lt;/p&gt;
-&lt;h2&gt;Deployment Mode&lt;/h2&gt;
-&lt;p&gt;Astro had a very fantastic support for deployment. Check &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/&quot;&gt;Deploy your Astro Site&lt;/a&gt; for more.&lt;/p&gt;
-&lt;h3&gt;Vercel&lt;/h3&gt;
-&lt;p&gt;This theme supports Vercel by default:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Push your code to your online Git repository (GitHub, GitLab, BitBucket).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vercel.com/new&quot;&gt;Import your project&lt;/a&gt; into Vercel.&lt;/li&gt;
-&lt;li&gt;Vercel will automatically detect Astro and configure the right settings.&lt;/li&gt;
-&lt;li&gt;Your application is deployed! (e.g. &lt;a href=&quot;https://astro.vercel.app/&quot;&gt;astro.vercel.app&lt;/a&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;And vercel also support static method:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
-import vercelStatic from &apos;@astrojs/vercel/static&apos;; // [!code ++]
-
-export default defineConfig({
-  //   ...
-  adapter: vercelServerless() // [!code --]
-  adapter: vercelStatic(), // [!code ++]
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Node server&lt;/h3&gt;
-&lt;p&gt;If you are deploying with Node.js locally, you need to install &lt;code&gt;@astrojs/node&lt;/code&gt; first:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;bun add &apos;@astrojs/node&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then follow the comments in &lt;code&gt;astro.config.ts&lt;/code&gt; and modify like:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import node from &apos;@astrojs/node&apos; // [!code ++]
-import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
-
-export default defineConfig({
-  //   ...
-  adapter: vercelServerless(), // [!code --]
-  adapter: node({ mode: &apos;standalone&apos; }), // [!code ++]
-
-  integrations: [
-    // prettier-ignore
-    outputCopier({ // [!code --]
-      integ: [&apos;sitemap&apos;, &apos;pagefind&apos;] // [!code --]
-    }) // [!code --]
-  ]
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Bun server&lt;/h3&gt;
-&lt;p&gt;Bun also support static method.&lt;/p&gt;
-&lt;p&gt;Check &lt;a href=&quot;https://www.npmjs.com/package/@nurodev/astro-bun&quot;&gt;@nurodev/astro-bun&lt;/a&gt; for more.&lt;/p&gt;
-&lt;h3&gt;Static&lt;/h3&gt;
-&lt;p&gt;Remove all server adapter configuration in &lt;code&gt;astro.config.ts&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
-
-export default defineConfig({
-  //   ...
-  adapter: vercelServerless(), // [!code --]
-  output: &apos;server&apos; // [!code --]
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;GitHub Pages&lt;/h3&gt;
-&lt;p&gt;See &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/github/&quot;&gt;Astro: Configure Astro for GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For ones deploying on GitHub Pages with a base path, like &lt;code&gt;username.github.io/repo-name&lt;/code&gt;, please read &lt;a href=&quot;/docs/setup/deployment#platform-with-base-path&quot;&gt;Deployment#Platform with Base Path&lt;/a&gt;.
-carefully.&lt;/p&gt;
-&lt;h2&gt;Platform with Base Path&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Astro provides basic support for a base path — see the &quot;base&quot; option in the configuration reference &lt;a href=&quot;https://docs.astro.build/en/reference/configuration-reference/#base&quot;&gt;Astro: base&lt;/a&gt; for more.&lt;/li&gt;
-&lt;li&gt;This theme will not support the base path, as it seriously break down the experience of remote developments. In general, deploying the template with a base path is not recommended because the homepage integrates lists, resume elements, and other features that rely on the template’s source structure.&lt;/li&gt;
-&lt;li&gt;If you follow the guide and modify the code, you can deploy with a base path, but you cannot use the same project copy to deploy both with and without a base path simultaneously. Proceed at your own risk; do not open issues about this unless you plan to contribute improvements to the docs.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Set the &lt;code&gt;base&lt;/code&gt; option in &lt;code&gt;astro.config.ts&lt;/code&gt; to your base path, for example:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export default defineConfig({
-  //   ...
-  base: &apos;/repo-name/&apos; // Replace with your repository name
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Update all internal links in Dynamic script files:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;src/components/BaseHead.astro&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;src/pages/docs/DocsContent.astro&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;src/pages/rss.xml.ts&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;packages/pure/components/pages/PostPreview.astro&lt;/code&gt; (&lt;a href=&quot;/docs/advanced/customize&quot;&gt;Customize Theme&lt;/a&gt; is required to make the change)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Update all static resource paths:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add base paths in &lt;code&gt;src/site.config.ts&lt;/code&gt;. Especially the menu configs.&lt;/li&gt;
-&lt;li&gt;Add base paths in &lt;code&gt;src/plugins/shiki-transformers.ts&lt;/code&gt; for all &lt;code&gt;/icons/code.svg&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Add base paths in &lt;code&gt;src/assets/styles/app.css&lt;/code&gt; for all url in &lt;code&gt;@font-face&lt;/code&gt; property.&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</content:encoded></item><item><title>Configuration</title><link>https://astro-pure.js.org/docs/setup/configuration</link><guid isPermaLink="true">https://astro-pure.js.org/docs/setup/configuration</guid><description>Configuration files</description><content:encoded>&lt;h2&gt;Theme Configuration&lt;/h2&gt;
 &lt;p&gt;File: &lt;code&gt;src/site.config.ts&lt;/code&gt;&lt;/p&gt;
