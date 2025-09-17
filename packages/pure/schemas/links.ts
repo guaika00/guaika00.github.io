@@ -21,8 +21,8 @@ export const FriendLinksSchema = () =>
       applyTip: [
         { name: 'Name', val: 'Astro Pure' },
         { name: 'Desc', val: 'Null' },
-        { name: 'Link', val: 'https://astro-pure.js.org/' },
-        { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+        { name: 'Link', val: 'https://guaika00.github.io/' },
+        { name: 'Avatar', val: 'https://guaika00.github.io/favicon/favicon.ico' }
       ]
     })
     .describe('Friend links for your website.')
