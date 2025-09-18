@@ -1,6 +1,12 @@
 ---
+title: MBTI Partner Compatibility
+publishDate: 2025-09-18 15:43:20
+description: 'MBTI Partner Compatibility'
+tags:
+  - Markdown
+heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
+language: '中文'
 
-import ECharts from '@/components/ECharts.astro'
 ---
 
 ## 内嵌 Astro 组件

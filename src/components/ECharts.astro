@@ -1,44 +1,51 @@
 ---
-// 接收外部传入的配置项和样式
+// 1. 修正 ECharts 类型定义：EChartsOption（复数）
+import type { EChartsOption } from 'echarts';
+
+// 组件接收的 Props 定义
 interface Props {
-  // ECharts 配置项（必填，如图表类型、数据等）
-  option: echarts.EChartOption;
-  // 图表容器样式（可选，如宽高）
+  // 必传：ECharts 配置项（图表类型、数据等）
+  option: EChartsOption;
+  // 可选：图表容器样式（默认宽100%、高400px）
   style?: { [key: string]: string };
-  // 图表 ID（可选，用于多图表区分）
+  // 可选：图表ID（用于多图表区分，默认自动生成）
   id?: string;
 }
 
-const { 
-  option, 
-  style = { width: '100%', height: '400px' }, 
-  id = `echart-${Math.random().toString(36).substr(2, 9)}` 
+// 解构 Props，设置默认值
+const {
+  option,
+  style = { width: '100%', height: '400px' },
+  // 2. 替换 substr 为 slice，避免弃用警告
+  id = `echart-${Math.random().toString(36).slice(2, 11)}`
 } = Astro.props;
 ---
 
-<!-- 图表容器 -->
+<!-- 图表容器：绑定 ID 和样式 -->
 <div id={id} style={style}></div>
 
 <script>
-  // 导入 ECharts
+  // 3. 移除 solid-js 依赖，改用 Astro 原生 DOM 加载事件
   import * as echarts from 'echarts';
-  import { onMounted } from 'solid-js'; // Astro 支持的前端框架钩子（用于 DOM 加载后初始化）
 
-  // 组件挂载后初始化图表
-  onMounted(() => {
-    // 获取图表容器
-    const container = document.getElementById(id);
-    if (!container) return;
+  // 4. 从 Astro.props 中读取组件传入的参数（脚本内无法直接访问顶部变量）
+  const { option, id } = Astro.props;
+
+  // DOM 加载完成后初始化图表（确保容器已渲染）
+  document.addEventListener('DOMContentLoaded', () => {
+    // 获取图表容器元素
+    const chartContainer = document.getElementById(id);
+    if (!chartContainer) return; // 容器不存在时跳过
 
     // 初始化 ECharts 实例
-    const chart = echarts.init(container);
+    const myChart = echarts.init(chartContainer);
 
-    // 设置图表配置项（外部传入的 option）
-    chart.setOption(option);
+    // 传入配置项，渲染图表
+    myChart.setOption(option);
 
-    // 监听窗口大小变化，自动调整图表尺寸
+    // 监听窗口 resize，自动调整图表尺寸（适配响应式）
     window.addEventListener('resize', () => {
-      chart.resize();
+      myChart.resize();
     });
   });
 </script>
