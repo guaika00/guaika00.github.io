@@ -1,9 +1,9 @@
 ---
 title: MBTI Partner Compatibility
-publishDate: 2025-09-18 15:45:33
+publishDate: 2025-09-18 15:43:20
 description: 'MBTI Partner Compatibility'
 tags:
-  - MBTI
+  - Markdown
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
@@ -11,7 +11,6 @@ language: '中文'
 ## 内嵌 Astro 组件
 
 <div id="container" style="height: 100%"></div>
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript">
     var dom = document.getElementById('container');
@@ -22,8 +21,6 @@ language: '中文'
     var app = {};
     
     var option;
-
-    // Click on the data to toggle grouping
       const mbti = [
         'ENFJ',
         'ENFP',
