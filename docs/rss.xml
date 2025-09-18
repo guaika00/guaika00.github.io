@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/scripts/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:h="http://www.w3.org/TR/html4/"><channel><title>XiCha 喜茶同学</title><description>Money comes, wealth comes.</description><link>https://guaika00.github.io</link><item><title>Customize Theme</title><link>https://guaika00.github.io/docs/advanced/customize</link><guid isPermaLink="true">https://guaika00.github.io/docs/advanced/customize</guid><description>Custom theme by yourself</description><content:encoded>&lt;p&gt;import { Aside, Spoiler, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/scripts/pretty-feed-v3.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:h="http://www.w3.org/TR/html4/"><channel><title>XiCha 喜茶同学</title><description>Money comes, wealth comes.</description><link>https://guaika00.github.io</link><item><title>Acknowledgements</title><link>https://guaika00.github.io/docs/advanced/thanks</link><guid isPermaLink="true">https://guaika00.github.io/docs/advanced/thanks</guid><description>Acknowledgements for this theme project</description><content:encoded>&lt;p&gt;import { GithubCard } from &apos;astro-pure/advanced&apos;
+import { Button } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;p&gt;The astro-theme-pure theme is open source under the &lt;a href=&quot;https://github.com/cworld1/astro-theme-pure/blob/main/LICENSE&quot;&gt;Apache 2.0&lt;/a&gt; license. Please abide by this license for any further development.&lt;/p&gt;
+&lt;h2&gt;Contributions&lt;/h2&gt;
+&lt;p&gt;A big thank you to everyone who has contributed to the &lt;a href=&quot;https://github.com/cworld1/astro-theme-pure&quot;&gt;astro-theme-pure&lt;/a&gt;. The open-source community is amazing because of you.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/cworld1/astro-theme-pure/graphs/contributors&quot;&gt;&lt;img src=&quot;https://contrib.rocks/image?repo=cworld1/astro-theme-pure&quot; alt=&quot;contributors&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Sponsorship&lt;/h2&gt;
+&lt;p&gt;We would like to express our gratitude to all the sponsors.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h2&gt;Open Source References&lt;/h2&gt;
+&lt;p&gt;This theme uses/references/derives content from the following projects:&lt;/p&gt;
+&lt;p&gt;Framework:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/withastro/astro&quot;&gt;astro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/unocss/unocss&quot;&gt;unocss&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Content rendering:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mdx-js/mdx/&quot;&gt;mdx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/unocss/unocss/tree/main/packages-presets/preset-typography&quot;&gt;@unocss/preset-typography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rehypejs/rehype&quot;&gt;@unifiedjs/rehype&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/remarkjs/remark&quot;&gt;@unifiedjs/remark&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Integrations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Code block: &lt;a href=&quot;https://github.com/shikijs/shiki&quot;&gt;Shiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Image lightbox: &lt;a href=&quot;https://github.com/francoischalifour/medium-zoom&quot;&gt;Medium Zoom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comment: &lt;a href=&quot;https://github.com/walinejs/waline&quot;&gt;Waline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Search: &lt;a href=&quot;https://github.com/cloudcannon/pagefind&quot;&gt;Pagefind&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Others:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compress: &lt;a href=&quot;https://github.com/PlayForm/Compress&quot;&gt;playform/compress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Image compress: &lt;a href=&quot;https://github.com/lovell/sharp&quot;&gt;sharp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Customize Theme</title><link>https://guaika00.github.io/docs/advanced/customize</link><guid isPermaLink="true">https://guaika00.github.io/docs/advanced/customize</guid><description>Custom theme by yourself</description><content:encoded>&lt;p&gt;import { Aside, Spoiler, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;h2&gt;You Should Know&lt;/h2&gt;
 &lt;p&gt;This theme is designed to &quot;NPM Package&quot; for the following reasons:&lt;/p&gt;
 &lt;ol&gt;
@@ -143,41 +177,7 @@ import myImage from &apos;../assets/my_image.png&apos; // Image is 1600x900
     domains: [&apos;&amp;#x3C;specific site domain&gt;&apos;] // [!code ++]
   }
 })
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Acknowledgements</title><link>https://guaika00.github.io/docs/advanced/thanks</link><guid isPermaLink="true">https://guaika00.github.io/docs/advanced/thanks</guid><description>Acknowledgements for this theme project</description><content:encoded>&lt;p&gt;import { GithubCard } from &apos;astro-pure/advanced&apos;
-import { Button } from &apos;astro-pure/user&apos;&lt;/p&gt;
-&lt;p&gt;The astro-theme-pure theme is open source under the &lt;a href=&quot;https://github.com/cworld1/astro-theme-pure/blob/main/LICENSE&quot;&gt;Apache 2.0&lt;/a&gt; license. Please abide by this license for any further development.&lt;/p&gt;
-&lt;h2&gt;Contributions&lt;/h2&gt;
-&lt;p&gt;A big thank you to everyone who has contributed to the &lt;a href=&quot;https://github.com/cworld1/astro-theme-pure&quot;&gt;astro-theme-pure&lt;/a&gt;. The open-source community is amazing because of you.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/cworld1/astro-theme-pure/graphs/contributors&quot;&gt;&lt;img src=&quot;https://contrib.rocks/image?repo=cworld1/astro-theme-pure&quot; alt=&quot;contributors&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Sponsorship&lt;/h2&gt;
-&lt;p&gt;We would like to express our gratitude to all the sponsors.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h2&gt;Open Source References&lt;/h2&gt;
-&lt;p&gt;This theme uses/references/derives content from the following projects:&lt;/p&gt;
-&lt;p&gt;Framework:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/withastro/astro&quot;&gt;astro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/unocss/unocss&quot;&gt;unocss&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Content rendering:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/mdx-js/mdx/&quot;&gt;mdx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/unocss/unocss/tree/main/packages-presets/preset-typography&quot;&gt;@unocss/preset-typography&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/rehypejs/rehype&quot;&gt;@unifiedjs/rehype&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/remarkjs/remark&quot;&gt;@unifiedjs/remark&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Integrations:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Code block: &lt;a href=&quot;https://github.com/shikijs/shiki&quot;&gt;Shiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Image lightbox: &lt;a href=&quot;https://github.com/francoischalifour/medium-zoom&quot;&gt;Medium Zoom&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Comment: &lt;a href=&quot;https://github.com/walinejs/waline&quot;&gt;Waline&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Search: &lt;a href=&quot;https://github.com/cloudcannon/pagefind&quot;&gt;Pagefind&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Others:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Compress: &lt;a href=&quot;https://github.com/PlayForm/Compress&quot;&gt;playform/compress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Image compress: &lt;a href=&quot;https://github.com/lovell/sharp&quot;&gt;sharp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title>Update Theme</title><link>https://guaika00.github.io/docs/advanced/update</link><guid isPermaLink="true">https://guaika00.github.io/docs/advanced/update</guid><description>Update astro theme pure to the latest version</description><content:encoded>&lt;p&gt;import { Aside } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Update Theme</title><link>https://guaika00.github.io/docs/advanced/update</link><guid isPermaLink="true">https://guaika00.github.io/docs/advanced/update</guid><description>Update astro theme pure to the latest version</description><content:encoded>&lt;p&gt;import { Aside } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;h2&gt;Breaking Changes&lt;/h2&gt;
 &lt;h3&gt;v4.0.8&lt;/h3&gt;
 &lt;p&gt;No breaking changes.&lt;/p&gt;
@@ -437,105 +437,7 @@ f: ^src\\pages\\terms\\.*\.md$
 
 ### Blog ###
 # Your own files
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Deployment</title><link>https://guaika00.github.io/docs/setup/deployment</link><guid isPermaLink="true">https://guaika00.github.io/docs/setup/deployment</guid><description>Deploy your site to various platforms</description><content:encoded>&lt;p&gt;import { Aside, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
-&lt;h2&gt;Package Mode&lt;/h2&gt;
-&lt;p&gt;This theme which &gt;= v4.0.0 has integrated NPM package mode. Recommended way is remove local package file, and install the theme integration from NPM. If there&apos;s some reason you want to change the package content, you should link local package to your theme template. A &lt;code&gt;bun&lt;/code&gt; method is integrated. You should:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Add environment variable &lt;code&gt;BUN_LINK_PKG=true&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;bun pure check&lt;/code&gt; to link the package automatically.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This method can also work on Deployment for other platforms like &apos;Vercel&apos;. All you need is to add the environment variable to build options on your platform control settings. The build command &lt;code&gt;astro-pure check &amp;#x26;&amp;#x26; astro check &amp;#x26;&amp;#x26; astro build&lt;/code&gt; will automatically link the package.&lt;/p&gt;
-&lt;h2&gt;Deployment Mode&lt;/h2&gt;
-&lt;p&gt;Astro had a very fantastic support for deployment. Check &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/&quot;&gt;Deploy your Astro Site&lt;/a&gt; for more.&lt;/p&gt;
-&lt;h3&gt;Vercel&lt;/h3&gt;
-&lt;p&gt;This theme supports Vercel by default:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Push your code to your online Git repository (GitHub, GitLab, BitBucket).&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vercel.com/new&quot;&gt;Import your project&lt;/a&gt; into Vercel.&lt;/li&gt;
-&lt;li&gt;Vercel will automatically detect Astro and configure the right settings.&lt;/li&gt;
-&lt;li&gt;Your application is deployed! (e.g. &lt;a href=&quot;https://astro.vercel.app/&quot;&gt;astro.vercel.app&lt;/a&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;And vercel also support static method:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
-import vercelStatic from &apos;@astrojs/vercel/static&apos;; // [!code ++]
-
-export default defineConfig({
-  //   ...
-  adapter: vercelServerless() // [!code --]
-  adapter: vercelStatic(), // [!code ++]
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Node server&lt;/h3&gt;
-&lt;p&gt;If you are deploying with Node.js locally, you need to install &lt;code&gt;@astrojs/node&lt;/code&gt; first:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;bun add &apos;@astrojs/node&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then follow the comments in &lt;code&gt;astro.config.ts&lt;/code&gt; and modify like:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import node from &apos;@astrojs/node&apos; // [!code ++]
-import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
-
-export default defineConfig({
-  //   ...
-  adapter: vercelServerless(), // [!code --]
-  adapter: node({ mode: &apos;standalone&apos; }), // [!code ++]
-
-  integrations: [
-    // prettier-ignore
-    outputCopier({ // [!code --]
-      integ: [&apos;sitemap&apos;, &apos;pagefind&apos;] // [!code --]
-    }) // [!code --]
-  ]
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Bun server&lt;/h3&gt;
-&lt;p&gt;Bun also support static method.&lt;/p&gt;
-&lt;p&gt;Check &lt;a href=&quot;https://www.npmjs.com/package/@nurodev/astro-bun&quot;&gt;@nurodev/astro-bun&lt;/a&gt; for more.&lt;/p&gt;
-&lt;h3&gt;Static&lt;/h3&gt;
-&lt;p&gt;Remove all server adapter configuration in &lt;code&gt;astro.config.ts&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
-
-export default defineConfig({
-  //   ...
-  adapter: vercelServerless(), // [!code --]
-  output: &apos;server&apos; // [!code --]
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;GitHub Pages&lt;/h3&gt;
-&lt;p&gt;See &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/github/&quot;&gt;Astro: Configure Astro for GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For ones deploying on GitHub Pages with a base path, like &lt;code&gt;username.github.io/repo-name&lt;/code&gt;, please read &lt;a href=&quot;/docs/setup/deployment#platform-with-base-path&quot;&gt;Deployment#Platform with Base Path&lt;/a&gt;.
-carefully.&lt;/p&gt;
-&lt;h2&gt;Platform with Base Path&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Astro provides basic support for a base path — see the &quot;base&quot; option in the configuration reference &lt;a href=&quot;https://docs.astro.build/en/reference/configuration-reference/#base&quot;&gt;Astro: base&lt;/a&gt; for more.&lt;/li&gt;
-&lt;li&gt;This theme will not support the base path, as it seriously break down the experience of remote developments. In general, deploying the template with a base path is not recommended because the homepage integrates lists, resume elements, and other features that rely on the template’s source structure.&lt;/li&gt;
-&lt;li&gt;If you follow the guide and modify the code, you can deploy with a base path, but you cannot use the same project copy to deploy both with and without a base path simultaneously. Proceed at your own risk; do not open issues about this unless you plan to contribute improvements to the docs.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Set the &lt;code&gt;base&lt;/code&gt; option in &lt;code&gt;astro.config.ts&lt;/code&gt; to your base path, for example:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export default defineConfig({
-  //   ...
-  base: &apos;/repo-name/&apos; // Replace with your repository name
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Update all internal links in Dynamic script files:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;src/components/BaseHead.astro&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;src/pages/docs/DocsContent.astro&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;src/pages/rss.xml.ts&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;packages/pure/components/pages/PostPreview.astro&lt;/code&gt; (&lt;a href=&quot;/docs/advanced/customize&quot;&gt;Customize Theme&lt;/a&gt; is required to make the change)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Update all static resource paths:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add base paths in &lt;code&gt;src/site.config.ts&lt;/code&gt;. Especially the menu configs.&lt;/li&gt;
-&lt;li&gt;Add base paths in &lt;code&gt;src/plugins/shiki-transformers.ts&lt;/code&gt; for all &lt;code&gt;/icons/code.svg&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Add base paths in &lt;code&gt;src/assets/styles/app.css&lt;/code&gt; for all url in &lt;code&gt;@font-face&lt;/code&gt; property.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title>Authoring Content</title><link>https://guaika00.github.io/docs/setup/content</link><guid isPermaLink="true">https://guaika00.github.io/docs/setup/content</guid><description>Making your own content</description><content:encoded>&lt;p&gt;import { Aside } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Authoring Content</title><link>https://guaika00.github.io/docs/setup/content</link><guid isPermaLink="true">https://guaika00.github.io/docs/setup/content</guid><description>Making your own content</description><content:encoded>&lt;p&gt;import { Aside } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;p&gt;Astro helps you &lt;a href=&quot;https://docs.astro.build/en/guides/content/&quot;&gt;author and present your content&lt;/a&gt;. You can write a blog post directly in Astro using Markdown/MDX, or fetch your content from a headless CMS. Astro lets you build a site around your content: you can add a layout to your pages, create an index of posts, and set up an RSS feed to allow readers to subscribe.&lt;/p&gt;
 &lt;h2&gt;Writing Content&lt;/h2&gt;
 &lt;p&gt;In Astro, you can author your content in a variety of ways:&lt;/p&gt;
@@ -657,7 +559,105 @@ heroImage: { src: &apos;./thumbnail.jpg&apos; } # will used to social-image
 This is the first section of the privacy policy.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;HTML Pages&lt;/h3&gt;
-&lt;p&gt;Files with the &lt;code&gt;.html&lt;/code&gt; file extension can be placed in the &lt;code&gt;src/pages/&lt;/code&gt; directory and used directly as pages on your site. Note that some key Astro features are not supported in &lt;a href=&quot;https://docs.astro.build/en/basics/astro-components/#html-components&quot;&gt;HTML Components&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title>Getting Started</title><link>https://guaika00.github.io/docs/setup/getting-started</link><guid isPermaLink="true">https://guaika00.github.io/docs/setup/getting-started</guid><description>Get started with the XiCha 喜茶同学</description><content:encoded>&lt;p&gt;import { Steps, Aside, Tabs, TabItem } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;p&gt;Files with the &lt;code&gt;.html&lt;/code&gt; file extension can be placed in the &lt;code&gt;src/pages/&lt;/code&gt; directory and used directly as pages on your site. Note that some key Astro features are not supported in &lt;a href=&quot;https://docs.astro.build/en/basics/astro-components/#html-components&quot;&gt;HTML Components&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title>Deployment</title><link>https://guaika00.github.io/docs/setup/deployment</link><guid isPermaLink="true">https://guaika00.github.io/docs/setup/deployment</guid><description>Deploy your site to various platforms</description><content:encoded>&lt;p&gt;import { Aside, Steps } from &apos;astro-pure/user&apos;&lt;/p&gt;
+&lt;h2&gt;Package Mode&lt;/h2&gt;
+&lt;p&gt;This theme which &gt;= v4.0.0 has integrated NPM package mode. Recommended way is remove local package file, and install the theme integration from NPM. If there&apos;s some reason you want to change the package content, you should link local package to your theme template. A &lt;code&gt;bun&lt;/code&gt; method is integrated. You should:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add environment variable &lt;code&gt;BUN_LINK_PKG=true&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;bun pure check&lt;/code&gt; to link the package automatically.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This method can also work on Deployment for other platforms like &apos;Vercel&apos;. All you need is to add the environment variable to build options on your platform control settings. The build command &lt;code&gt;astro-pure check &amp;#x26;&amp;#x26; astro check &amp;#x26;&amp;#x26; astro build&lt;/code&gt; will automatically link the package.&lt;/p&gt;
+&lt;h2&gt;Deployment Mode&lt;/h2&gt;
+&lt;p&gt;Astro had a very fantastic support for deployment. Check &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/&quot;&gt;Deploy your Astro Site&lt;/a&gt; for more.&lt;/p&gt;
+&lt;h3&gt;Vercel&lt;/h3&gt;
+&lt;p&gt;This theme supports Vercel by default:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Push your code to your online Git repository (GitHub, GitLab, BitBucket).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vercel.com/new&quot;&gt;Import your project&lt;/a&gt; into Vercel.&lt;/li&gt;
+&lt;li&gt;Vercel will automatically detect Astro and configure the right settings.&lt;/li&gt;
+&lt;li&gt;Your application is deployed! (e.g. &lt;a href=&quot;https://astro.vercel.app/&quot;&gt;astro.vercel.app&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And vercel also support static method:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
+import vercelStatic from &apos;@astrojs/vercel/static&apos;; // [!code ++]
+
+export default defineConfig({
+  //   ...
+  adapter: vercelServerless() // [!code --]
+  adapter: vercelStatic(), // [!code ++]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Node server&lt;/h3&gt;
+&lt;p&gt;If you are deploying with Node.js locally, you need to install &lt;code&gt;@astrojs/node&lt;/code&gt; first:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;bun add &apos;@astrojs/node&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then follow the comments in &lt;code&gt;astro.config.ts&lt;/code&gt; and modify like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import node from &apos;@astrojs/node&apos; // [!code ++]
+import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
+
+export default defineConfig({
+  //   ...
+  adapter: vercelServerless(), // [!code --]
+  adapter: node({ mode: &apos;standalone&apos; }), // [!code ++]
+
+  integrations: [
+    // prettier-ignore
+    outputCopier({ // [!code --]
+      integ: [&apos;sitemap&apos;, &apos;pagefind&apos;] // [!code --]
+    }) // [!code --]
+  ]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Bun server&lt;/h3&gt;
+&lt;p&gt;Bun also support static method.&lt;/p&gt;
+&lt;p&gt;Check &lt;a href=&quot;https://www.npmjs.com/package/@nurodev/astro-bun&quot;&gt;@nurodev/astro-bun&lt;/a&gt; for more.&lt;/p&gt;
+&lt;h3&gt;Static&lt;/h3&gt;
+&lt;p&gt;Remove all server adapter configuration in &lt;code&gt;astro.config.ts&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;import vercelServerless from &apos;@astrojs/vercel/serverless&apos; // [!code --]
+
+export default defineConfig({
+  //   ...
+  adapter: vercelServerless(), // [!code --]
+  output: &apos;server&apos; // [!code --]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;GitHub Pages&lt;/h3&gt;
+&lt;p&gt;See &lt;a href=&quot;https://docs.astro.build/en/guides/deploy/github/&quot;&gt;Astro: Configure Astro for GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For ones deploying on GitHub Pages with a base path, like &lt;code&gt;username.github.io/repo-name&lt;/code&gt;, please read &lt;a href=&quot;/docs/setup/deployment#platform-with-base-path&quot;&gt;Deployment#Platform with Base Path&lt;/a&gt;.
+carefully.&lt;/p&gt;
+&lt;h2&gt;Platform with Base Path&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Astro provides basic support for a base path — see the &quot;base&quot; option in the configuration reference &lt;a href=&quot;https://docs.astro.build/en/reference/configuration-reference/#base&quot;&gt;Astro: base&lt;/a&gt; for more.&lt;/li&gt;
+&lt;li&gt;This theme will not support the base path, as it seriously break down the experience of remote developments. In general, deploying the template with a base path is not recommended because the homepage integrates lists, resume elements, and other features that rely on the template’s source structure.&lt;/li&gt;
+&lt;li&gt;If you follow the guide and modify the code, you can deploy with a base path, but you cannot use the same project copy to deploy both with and without a base path simultaneously. Proceed at your own risk; do not open issues about this unless you plan to contribute improvements to the docs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set the &lt;code&gt;base&lt;/code&gt; option in &lt;code&gt;astro.config.ts&lt;/code&gt; to your base path, for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ts&quot;&gt;export default defineConfig({
+  //   ...
+  base: &apos;/repo-name/&apos; // Replace with your repository name
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update all internal links in Dynamic script files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src/components/BaseHead.astro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/pages/docs/DocsContent.astro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/pages/rss.xml.ts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;packages/pure/components/pages/PostPreview.astro&lt;/code&gt; (&lt;a href=&quot;/docs/advanced/customize&quot;&gt;Customize Theme&lt;/a&gt; is required to make the change)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update all static resource paths:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add base paths in &lt;code&gt;src/site.config.ts&lt;/code&gt;. Especially the menu configs.&lt;/li&gt;
+&lt;li&gt;Add base paths in &lt;code&gt;src/plugins/shiki-transformers.ts&lt;/code&gt; for all &lt;code&gt;/icons/code.svg&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add base paths in &lt;code&gt;src/assets/styles/app.css&lt;/code&gt; for all url in &lt;code&gt;@font-face&lt;/code&gt; property.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title>Getting Started</title><link>https://guaika00.github.io/docs/setup/getting-started</link><guid isPermaLink="true">https://guaika00.github.io/docs/setup/getting-started</guid><description>Get started with the XiCha 喜茶同学</description><content:encoded>&lt;p&gt;import { Steps, Aside, Tabs, TabItem } from &apos;astro-pure/user&apos;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Two way to install. &quot;Template&quot; way is lightweight and simple, but hard to update; while &quot;Fork&quot; way is easy to update but needs some skills for git.&lt;/p&gt;
 &lt;h3&gt;Install Using Template&lt;/h3&gt;
