@@ -1,9 +1,9 @@
 ---
 title: MBTI Partner Compatibility
-publishDate: 2023-07-26 08:00:00
-description: 'Markdown 是一种轻量级的「标记语言」。'
+publishDate: 2025-09-18 15:45:33
+description: 'MBTI Partner Compatibility'
 tags:
-  - Markdown
+  - MBTI
 heroImage: { src: './thumbnail.jpg', color: '#B4C6DA' }
 language: '中文'
 ---
@@ -11,7 +11,7 @@ language: '中文'
 ## 内嵌 Astro 组件
 
 <div id="container" style="height: 100%"></div>
-
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript">
     var dom = document.getElementById('container');
