@@ -1,0 +1,44 @@
+---
+// 接收外部传入的配置项和样式
+interface Props {
+  // ECharts 配置项（必填，如图表类型、数据等）
+  option: echarts.EChartOption;
+  // 图表容器样式（可选，如宽高）
+  style?: { [key: string]: string };
+  // 图表 ID（可选，用于多图表区分）
+  id?: string;
+}
+
+const { 
+  option, 
+  style = { width: '100%', height: '400px' }, 
+  id = `echart-${Math.random().toString(36).substr(2, 9)}` 
+} = Astro.props;
+---
+
+<!-- 图表容器 -->
+<div id={id} style={style}></div>
+
+<script>
+  // 导入 ECharts
+  import * as echarts from 'echarts';
+  import { onMounted } from 'solid-js'; // Astro 支持的前端框架钩子（用于 DOM 加载后初始化）
+
+  // 组件挂载后初始化图表
+  onMounted(() => {
+    // 获取图表容器
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    // 初始化 ECharts 实例
+    const chart = echarts.init(container);
+
+    // 设置图表配置项（外部传入的 option）
+    chart.setOption(option);
+
+    // 监听窗口大小变化，自动调整图表尺寸
+    window.addEventListener('resize', () => {
+      chart.resize();
+    });
+  });
+</script>
