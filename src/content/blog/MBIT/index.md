@@ -11,7 +11,7 @@ language: '中文'
 ## 内嵌 Astro 组件
 
 <div id="container" style="height: 100%"></div>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript">
     var dom = document.getElementById('container');
